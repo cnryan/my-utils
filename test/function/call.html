@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../../dist/my-utils.js"></script>
+</head>
+<body>
+</body>
+<script>    
+    function add(a, b) {
+        return a + b + this.c;
+    }
+
+    let obj = {
+        c: 521
+    };
+
+    window.c = 1314;
+
+    console.log(myUtils.call(add, obj, 10, 20));
+    console.log(myUtils.call(add, null, 30, 40));
+
+    console.log(add.call(obj, 10, 20));
+    
+</script>
+</html>
