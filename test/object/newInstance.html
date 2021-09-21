@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>自定义new</title>
+</head>
+<body>
+<script src="../../dist/my-utils.js"></script>
+<script>
+  function Person(name, age) {
+    this.name = name
+    this.age = age
+  }
+
+  const p = new Person('tom', 12)
+  console.log(p)
+
+  const p2 = myUtils.newInstance(Person, 'Jack', 13)
+  console.log(p2, p2.constructor)
+</script>
+</body>
+</html>

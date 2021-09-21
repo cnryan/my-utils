@@ -15,3 +15,10 @@ export { chunk1, chunk2 } from './array/chunk'
 export { difference } from './array/difference'
 export { pull, pullAll } from './array/pull'
 export { drop, dropRight } from './array/drop'
+
+/** 对象工具 **/
+export { newInstance } from'./object/newInstance'
+export { myInstanceOf } from './object/myInstanceOf'
+export { mergeObject } from './object/mergeObject'
+export { clone1, clone2 } from './object/clone'
+export { deepClone1, deepClone2, deepClone3, deepClone4 } from './object/deepClone'

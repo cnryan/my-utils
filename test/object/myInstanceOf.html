@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>自定义instanceof</title>
+</head>
+<body>
+<script src="../../dist/my-utils.js"></script>
+<script>
+  function Person(name, age) {
+    this.name = name
+    this.age = age
+  }
+  const p = new Person('tom', 12)
+
+  console.log(myUtils.myInstanceOf(p, Object), p instanceof Object)
+  console.log(myUtils.myInstanceOf(p, Person), p instanceof Person)
+  console.log(myUtils.myInstanceOf(p, Function), p instanceof Function)
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>深度克隆/深复制/深拷贝</title>
+</head>
+<body>
+<script src="https://cdn.bootcss.com/lodash.js/4.17.15/lodash.min.js"></script>
+<script src="../../dist/my-utils.js"></script>
+<script>
+  const obj1 = {
+    a: 1,
+    b: [ 'e', 'f', 'g'],
+    c: { h: { i: 2 } },
+    d: function (){}
+  }
+  obj1.b.push(obj1.c)
+  obj1.c.j = obj1.b
+
+  // const obj2 = _.cloneDeep(obj1)
+  // const obj2 = aUtils.deepClone1(obj1)
+  // const obj2 = aUtils.deepClone2(obj1)
+  // const obj2 = aUtils.deepClone3(obj1)
+  const obj2 = myUtils.deepClone4(obj1)
+  console.log(obj2, obj2.c === obj1.c, obj2.d === obj1.d)
+</script>
+</body>
+</html>
