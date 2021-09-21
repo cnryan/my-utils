@@ -31,3 +31,6 @@ export { addEventListener } from './event-bind/index'
 
 /** 事件总线 **/
 export { eventBus } from './event-bus/index'
+
+/** 消息订阅与发布 **/
+export { PubSub } from './pub-sub/index'
