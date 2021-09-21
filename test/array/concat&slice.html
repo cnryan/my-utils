@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数组合并与切片</title>
+</head>
+<body>
+<script src="../../dist/my-utils.js"></script>
+<script>
+  console.log(myUtils.concat([1, 2], [3, 4], 6))  // [1, 2, 3, 4, 6]
+  console.log(myUtils.slice([1, 3, 5, 7, 9]))  // [1, 3, 5, 7, 9]
+  console.log(myUtils.slice([1, 3, 5, 7, 9], 1, 3)) // [3, 5]
+  console.log(myUtils.slice([1, 3, 5, 7, 9], 1, 10)) // [3, 5, 7, 9]
+</script>
+</body>
+</html>

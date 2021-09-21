@@ -4,3 +4,23 @@
 - bind()
 - 函数节流 throttle()
 - 函数防抖 debounce()
+## 数组相关
+- map()
+- reduce()
+- filter()
+- find()
+- findIndex()
+- every()
+- some()
+- unique()
+- concat()
+- slice()
+- flatten()
+- chunk()
+- difference()
+- pull()
+- pullAll()
+- drop()
+- dropRight()
+## 在线文档
+https://zxfjd3g.github.io/atguigu_utils-docs/
