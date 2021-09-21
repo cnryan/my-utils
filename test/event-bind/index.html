@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>自定义事件监听</title>
+</head>
+<body>
+
+<ul>
+    <li>AAA1</li>
+    <li>AAA2</li>
+    <li>AAA3</li>
+    <li>AAA4</li>
+</ul>
+
+<!-- 功能: 点击每行提示对应的文本 -->
+<script src="../../dist/my-utils.js"></script>
+<script>
+  // 不使用事件委托
+  // document.querySelectorAll('ul>li').forEach(li => {
+  //   // li.addEventListener('click', function (event) {
+  //   //   alert(this.innerHTML)
+  //   // })
+  //   myUtils.addEventListener(li, 'click', function (event) {
+  //     // alert(event.target.innerHTML)
+  //     alert(this.innerHTML)
+  //   })
+  // })
+
+  // 使用事件委托
+  const ul = document.querySelector('ul')
+  myUtils.addEventListener(ul, 'click', function (event) {
+    alert(event.target.innerHTML)
+  }, 'li')
+
+</script>
+</body>
+</html>

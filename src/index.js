@@ -25,3 +25,9 @@ export { deepClone1, deepClone2, deepClone3, deepClone4 } from './object/deepClo
 
 /** 字符串工具 **/
 export { reverseString, palindrome, truncate } from './string/index'
+
+/** 时间绑定 **/
+export { addEventListener } from './event-bind/index'
+
+/** 事件总线 **/
+export { eventBus } from './event-bus/index'

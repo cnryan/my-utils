@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>手写事件总线</title>
+</head>
+<body>
+<script src="../../dist/my-utils.js"></script>
+<script>
+  const { eventBus } = myUtils
+  eventBus.on('add', (data) => {
+    console.log('add', data)
+  })
+  eventBus.on('add', (data) => {
+    console.log('add2', data)
+  })
+  eventBus.on('delete', (data) => {
+    console.log('delete', data)
+  })
+
+  // eventBus.off('add')
+  // eventBus.off()
+
+  eventBus.emit('add', 123)
+  eventBus.emit('delete', 'abc')
+</script>
+</body>
+</html>
