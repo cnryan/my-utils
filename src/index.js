@@ -24,6 +24,7 @@ export { myInstanceOf } from './object/myInstanceOf'
 export { mergeObject } from './object/mergeObject'
 export { clone1, clone2 } from './object/clone'
 export { deepClone1, deepClone2, deepClone3, deepClone4 } from './object/deepClone'
+export { myExtend } from './object/extend'
 
 /** 字符串工具 **/
 export { reverseString, palindrome, truncate } from './string/index'
