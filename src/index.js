@@ -4,6 +4,7 @@ export { apply } from './function/apply'
 export { bind } from './function/bind'
 export { throttle} from './function/throttle'
 export { debounce } from './function/debounce'
+export { isFunction, isArray, isPlainObject, isEmptyObject, isArrayLike, isElement } from './function/type'
 
 /** 数组工具 **/
 export { map, reduce, filter, find, findIndex, every, some} from './array/declares'
