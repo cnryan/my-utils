@@ -14,7 +14,7 @@ export function deepClone1(target) {
 export function deepClone2(target) {
   if (target !== null && typeof target === 'object') {
     const cloneTarget = Array.isArray(target) ? [] : {}
-    for (const key in target) {
+    for (let key in target) {
       if (target.hasOwnProperty(key)) {
         cloneTarget[key] = deepClone2(target[key])
       }
