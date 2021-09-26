@@ -12,7 +12,7 @@ export { map, reduce, filter, find, findIndex, every, some} from './array/declar
 export { unique1, unique2, unique3, unique4 } from './array/unique'
 export { concat } from './array/concat'
 export { slice } from './array/slice'
-export { flatten1, flatten2 } from './array/flatten'
+export { flatten1, flatten2, flattenUnderscore } from './array/flatten'
 export { chunk1, chunk2 } from './array/chunk'
 export { difference } from './array/difference'
 export { pull, pullAll } from './array/pull'
