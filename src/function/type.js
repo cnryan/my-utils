@@ -1,6 +1,30 @@
+/**
+ * ES5之前共有6个基本类型，分别是：Undefined、Null、Boolean、Number、String、Object
+ * 对应的typeof运算值为 undefined、object、boolean、number、string、object，此外typeof还能返回function
+ */
+
+/**
+ * 常见的 toString
+ * var number = 1;          // [object Number]
+ * var string = '123';      // [object String]
+ * var boolean = true;      // [object Boolean]
+ * var und = undefined;     // [object Undefined]
+ * var nul = null;          // [object Null]
+ * var obj = {a: 1}         // [object Object]
+ * var array = [1, 2, 3];   // [object Array]
+ * var date = new Date();   // [object Date]
+ * var error = new Error(); // [object Error]
+ * var reg = /a/g;          // [object RegExp]
+ * var func = function a(){}; // [object Function]
+ * console.log(Object.prototype.toString.call(Math)); // [object Math]
+ * console.log(Object.prototype.toString.call(JSON)); // [object JSON]
+ * console.log(Object.prototype.toString.call(arguments)); // [object Arguments]
+ */
+
+
 const class2type = {}
 
-'Boolean Number String Function Array Date RegExp Object Error Null Undefined'.split(' ').map((item, index) => {
+'Boolean Number String Function Array Date RegExp Object Error Null Undefined'.split(' ').map((item) => {
   class2type['[object ' + item + ']'] = item.toLowerCase()
 })
 
@@ -54,7 +78,7 @@ export const isPlainObject = function(obj) {
 
 export const isEmptyObject = function(obj) {
   for (let name in obj) {
-    return false;
+    return false
   }
   return true
 }
@@ -65,8 +89,8 @@ export const isWindow = function(obj) {
 
 export const isArrayLike = function(obj) {
   // obj 必须有 length属性
-  let length = !!obj && "length" in obj && obj.length;
-  let typeRes = type(obj);
+  let length = !!obj && "length" in obj && obj.length
+  let typeRes = type(obj)
 
   // 排除掉函数和 Window 对象
   if (typeRes === "function" || isWindow(obj)) {
@@ -74,7 +98,7 @@ export const isArrayLike = function(obj) {
   }
 
   return typeRes === "array" || length === 0 ||
-    typeof length === "number" && length > 0 && (length - 1) in obj;
+    typeof length === "number" && length > 0 && (length - 1) in obj
 }
 
 // 判断是否为DOM元素
