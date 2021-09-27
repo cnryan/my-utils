@@ -7,6 +7,7 @@ export { debounce } from './function/debounce'
 export { isFunction, isArray, isPlainObject, isEmptyObject, isArrayLike, isElement } from './function/type'
 export { each } from './function/each'
 export { curry, currySimple1, currySimple2, curryWithHoles } from './function/curry'
+export { partial, partialWithHoles } from './function/partial'
 
 /** 数组工具 **/
 export { map, reduce, filter, find, findIndex, every, some} from './array/declares'
