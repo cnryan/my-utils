@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curry</title>
+    <script src="../../dist/my-utils.js"></script>
+</head>
+<body>
+</body>
+<script>
+  const fn1 = myUtils.currySimple2(function(a, b, c) {
+    console.log([a, b, c]);
+  });
+  //
+  fn1("a", "b", "c") // ["a", "b", "c"]
+  fn1("a", "b")("c") // ["a", "b", "c"]
+  fn1("a")("b")("c") // ["a", "b", "c"]
+  fn1("a")("b", "c") // ["a", "b", "c"]
+
+  // let _ = {}
+  // let fn2 = myUtils.curryWithHoles(function(a, b, c, d, e) {
+  //   console.log([a, b, c, d, e]);
+  // }, _);
+  //
+  // // 验证 输出全部都是 [1, 2, 3, 4, 5]
+  // fn2(1, 2, 3, 4, 5);
+  // fn2(_, 2, 3, 4, 5)(1);
+  // fn2(1, _, 3, 4, 5)(2);
+  // fn2(1, _, 3)(_, 4)(2)(5);
+  // fn2(1, _, _, 4)(_, 3)(2)(5);
+  // fn2(_, 2)(_, _, 4)(1)(3)(5)
+
+</script>
+</html>

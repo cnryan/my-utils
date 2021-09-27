@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build:watch": "webpack --watch"
+    "build:watch": "webpack --watch",
+    "debug": "node --inspect-brk ./node_modules/webpack/bin/webpack.js"
   },
   "keywords": [],
   "author": "",
