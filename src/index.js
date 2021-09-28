@@ -2,12 +2,14 @@
 export { call } from './function/call'
 export { apply } from './function/apply'
 export { bind } from './function/bind'
-export { throttle} from './function/throttle'
-export { debounce } from './function/debounce'
+export { throttle} from './function/throttle' // 节流
+export { debounce } from './function/debounce' // 防抖
 export { isFunction, isArray, isPlainObject, isEmptyObject, isArrayLike, isElement } from './function/type'
 export { each } from './function/each'
 export { curry, currySimple1, currySimple2, curryWithHoles } from './function/curry'
-export { partial, partialWithHoles } from './function/partial'
+export { partial, partialWithHoles } from './function/partial' // 偏函数
+export { compose } from './function/compose' // 组合
+export { memoize1, memoize2 } from './function/memoize' // 函数记忆
 
 /** 数组工具 **/
 export { map, reduce, filter, find, findIndex, every, some} from './array/declares'

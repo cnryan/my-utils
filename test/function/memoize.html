@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memoize</title>
+    <script src="../../dist/my-utils.js"></script>
+</head>
+<body>
+</body>
+<script>
+  const add = function (a, b, c) {
+    return a + b + c
+  };
+
+  const memoizedAdd1 = myUtils.memoize1(add);
+
+  console.time('use memoize')
+  for(let i = 0; i < 100000; i++) {
+    memoizedAdd1(1, 2, 3)
+  }
+  console.timeEnd('use memoize')
+
+  console.time('not use memoize')
+  for(let i = 0; i < 100000; i++) {
+    add(1, 2, 3)
+  }
+  console.timeEnd('not use memoize')
+
+  /**********/
+  const memoizedAdd2 = myUtils.memoize2(add, function () {
+    const args = Array.prototype.slice.call(arguments);
+    return JSON.stringify(args)
+  });
+
+  console.log(memoizedAdd2(1, 2, 3)) // 6
+  console.log(memoizedAdd2(1, 2, 4)) // 7
+
+  /****** 使用函数记忆计算斐波那契数列 ******/
+  let count = 0; // 用来记录运算次数
+  let fibonacci = function(n) {
+    count++;
+    return n < 2 ? n : fibonacci(n - 1) + fibonacci(n - 2);
+  };
+  fibonacci = myUtils.memoize2(fibonacci);
+  for (let i = 0; i <= 10; i++) {
+    fibonacci(i);
+  }
+  console.log(count) // 12
+  /**
+   * 为什么会是 12 次而不是 11 次？
+   * 在我们的写法中，其实我们用生成的 fibonacci 函数覆盖了原本了 fibonacci 函数，
+   * 当我们执行 fibonacci(0) 时，执行一次函数，cache 为 {0: 0}，
+   * 但是当我们执行 fibonacci(2) 的时候，执行 fibonacci(1) + fibonacci(0)，
+   * 因为 fibonacci(0) 的值为 0，!cache[address] 的结果为 true，又会执行一次 fibonacci 函数。
+   */
+
+</script>
+</html>
