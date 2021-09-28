@@ -19,6 +19,7 @@ export { chunk1, chunk2 } from './array/chunk'
 export { difference } from './array/difference'
 export { pull, pullAll } from './array/pull'
 export { drop, dropRight } from './array/drop'
+export { shuffle } from './array/shuffle'
 
 /** 对象工具 **/
 export { newInstance } from'./object/newInstance'
