@@ -10,6 +10,7 @@ export { curry, currySimple1, currySimple2, curryWithHoles } from './function/cu
 export { partial, partialWithHoles } from './function/partial' // 偏函数
 export { compose } from './function/compose' // 组合
 export { memoize1, memoize2 } from './function/memoize' // 函数记忆
+export { parseUrlParam } from './function/parseUrlParam' // 解析URL参数为对象
 
 /** 数组工具 **/
 export { map, reduce, filter, find, findIndex, every, some} from './array/declares'
