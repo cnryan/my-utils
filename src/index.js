@@ -32,6 +32,10 @@ export { clone1, clone2 } from './object/clone'
 export { deepClone1, deepClone2, deepClone3, deepClone4 } from './object/deepClone'
 export { myExtend } from './object/extend'
 
+/** http工具 **/
+export { jsonp } from './http/jsonp'
+export { ajax } from './http/ajax'
+
 /** 字符串工具 **/
 export { reverseString, palindrome, truncate } from './string/index'
 
