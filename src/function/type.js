@@ -83,6 +83,10 @@ export const isEmptyObject = function(obj) {
   return true
 }
 
+export const isObject = function(obj) {
+  return obj !== null && typeof obj === 'object'
+}
+
 export const isWindow = function(obj) {
   return obj != null && obj === obj.window
 }
